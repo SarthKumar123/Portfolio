@@ -170,6 +170,12 @@ img { max-width: 100%; display: block; }
 .project-preview { padding: 45px; display: grid; place-items: center; min-width: 0; }
 .project-preview.library { background: #23291e; }
 .project-preview.jobtrack { background: #d9ddbf; }
+
+.project-shot { width:100%; max-width:700px; aspect-ratio:16/9; border-radius:18px; overflow:hidden; box-shadow:0 28px 70px rgba(0,0,0,.3); border:1px solid rgba(255,255,255,.12); transform:rotate(-1deg); background:#111; }
+.project-shot-light { transform:rotate(1deg); box-shadow:0 24px 60px rgba(31,39,24,.2); }
+.project-shot img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform .45s ease; }
+.project-card:hover .project-shot img { transform:scale(1.035); }
+
 .mock-window { width: 100%; max-width: 670px; border-radius: 15px; overflow: hidden; box-shadow: 0 26px 60px rgba(0,0,0,.28); background: #151811; transform: rotate(-1.2deg); border: 1px solid rgba(255,255,255,.07); }
 .light-window { background: #f7f8f2; transform: rotate(1.2deg); }
 .mock-top { height: 36px; display: flex; align-items: center; gap: 6px; padding: 0 12px; background: #0e100c; color: white; }
