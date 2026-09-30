@@ -348,3 +348,21 @@ footer > span { text-align: right; }
 }
 
 .icon{width:18px;height:18px;display:inline-grid;place-items:center;font-style:normal}.nav-links a,.btn,.project-actions a,.contact-socials a{text-decoration:none}
+.project-live-frame { position:relative; background:#f7f6ef; }
+.project-live-frame iframe {
+  position:absolute;
+  inset:0;
+  width:160%;
+  height:160%;
+  border:0;
+  transform:scale(.625);
+  transform-origin:top left;
+  pointer-events:none;
+  background:#fff;
+}
+.preview-cover-link {
+  position:absolute;
+  inset:0;
+  z-index:2;
+  cursor:pointer;
+}
