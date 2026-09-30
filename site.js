@@ -2,7 +2,6 @@ const assets = {
   hero: ["image/webp", ["hero_0.txt", "hero_1.txt", "hero_2.txt"]],
   about: ["image/webp", ["about_0.txt", "about_1.txt", "about_2.txt"]],
   resume: ["application/pdf", ["resume_0.txt", "resume_1.txt"]],
-  digitalProject: ["image/webp", ["digital_project.txt"]],
   jobtrackProject: ["image/webp", ["jobtrack_project.txt"]]
 };
 
@@ -20,11 +19,10 @@ async function assetData(name) {
 
 (async () => {
   try {
-    const [hero, about, resume, digitalProject, jobtrackProject] = await Promise.all([
+    const [hero, about, resume, jobtrackProject] = await Promise.all([
       assetData("hero"),
       assetData("about"),
       assetData("resume"),
-      assetData("digitalProject"),
       assetData("jobtrackProject")
     ]);
 
@@ -36,7 +34,6 @@ async function assetData(name) {
       el.src = about;
     });
 
-    document.querySelectorAll('[data-asset="digitalProject"]').forEach((el) => { el.src = digitalProject; });
     document.querySelectorAll('[data-asset="jobtrackProject"]').forEach((el) => { el.src = jobtrackProject; });
 
     document.querySelectorAll("[data-resume]").forEach((a) => {
